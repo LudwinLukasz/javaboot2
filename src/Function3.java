@@ -39,11 +39,11 @@ public class Function3 {
         System.out.println("\ntranspozycja tablicy:");
         for (int[] a:arr
              ) {
-            System.out.println("");
             for (int b: a
                  ) {
                 System.out.print(b);
             }
+            System.out.print("\n");
         }
     }
 }
