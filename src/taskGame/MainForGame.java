@@ -18,10 +18,15 @@ public class MainForGame {
         game.addPlayer(p1);
         game.addPlayer(p2);
         game.addPlayer(p3);
-
-        System.out.println("wygrał: "+game.winner());
+        Player winner = game.winner();
+        if (winner != null) {
+            System.out.println("wygrał: " + game.winner().fullName());
+        }
         p2.addPoints(10000);
-        System.out.println("a teraz: "+game.winner());
+        if (winner != null) {
+            System.out.println("a teraz: " + game.winner().fullName());
+        }
+
 
     }
 }

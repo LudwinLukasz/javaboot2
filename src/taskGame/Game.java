@@ -38,15 +38,25 @@ public class Game {
        // actualPlayesrNum++;
 }
 
-    public String winner() {
-        String winner="";
+    public Player winner() {
+//        Player winner = null;
+//        int maxPoints=0;
+//        for (int i = 1; i < actualPlayesrNum;i++) {
+//            if (this.players[i].getPoints() > 100 && this.players[i].getPoints() > maxPoints) {
+//                maxPoints = this.players[i].getPoints();
+//                winner = this.players[i];
+//            }
+//        }
+//        return winner;
+        Player winner = players[0];
         int maxPoints=0;
-        for (int i = 0; i < actualPlayesrNum;i++) {
-            if (this.players[i].getPoints() > 100 && this.players[i].getPoints() > maxPoints) {
-                maxPoints = this.players[i].getPoints();
-                winner = this.players[i].fullName();
+        for (int i = 1; i < actualPlayesrNum;i++) {
+            if (this.players[i].getPoints() > winner.getPoints()) {
+                winner = this.players[i];
             }
         }
-        return winner;
+        if (winner.getPoints() > 100) {
+            return winner;
+        } else return null;
     }
 }
