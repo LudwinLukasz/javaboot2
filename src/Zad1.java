@@ -11,8 +11,18 @@ public class Zad1 {
         } else return c;
         //System.out.println(mess);
     }
+    public static double min(double a, double b, double c ) {
+        if (a<b) {
+            if(a<c) {
+                return a;
+            } else return c;
 
+        } else if (b <c) {
+            return b;
+        }else return c;
+    }
     public static void main(String[] args) {
-        System.out.println(najmniejsza(3,25,-10));
+        System.out.println(najmniejsza(3,25,-10)); //ja
+        System.out.println(min(3,25,-10)); //zajecia
     }
 }
