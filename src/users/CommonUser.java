@@ -7,11 +7,12 @@ import java.util.List;
  * Created by arabk on 30.07.2017.
  */
 public class CommonUser extends User {
-    private List<Permission> permissions = new ArrayList<>();
+    protected List<Permission> permissions = new ArrayList<>();
 
 
-    public CommonUser(String username, String password, String name, String surname) {
-        super(username, password, name, surname);
+    public CommonUser(String username, String password, String name, String surname, Long id,double salary) {
+        super(username, password, name, surname,id,salary);
+        this.id = id;
     }
 
     public void addPermission(Permission permission) {
@@ -29,7 +30,9 @@ public class CommonUser extends User {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                ", id=" + id +
                 ", permissions=" + permissions +
+                ", salary=" + salary +
                 '}';
     }
 }

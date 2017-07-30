@@ -5,12 +5,32 @@ package users;
  */
 public abstract class User {
     protected String username, password, name, surname;
+    protected Long id;
+    protected double salary;
 
-    public User(String username, String password, String name, String surname) {
+    public User(String username, String password, String name, String surname, Long id, double salary) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
+        this.id = id;
+        this.salary = salary;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -43,6 +63,10 @@ public abstract class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public void increaseSalry(double val) {
+        salary +=val;
     }
 
     @Override
