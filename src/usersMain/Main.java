@@ -37,5 +37,11 @@ public class Main {
         System.out.println(com1.getSalary());
         pm.givePayRise(2L,100);
         System.out.println(com1.getSalary());
+
+        List<User> usersss = UsersManager.getAll();
+        for(User u: usersss) {
+            //System.out.println(u.getName()+" "+ u.getSurname());
+            System.out.println(u);
+        }
     }
 }

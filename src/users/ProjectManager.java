@@ -42,7 +42,7 @@ public class ProjectManager extends CommonUser {
              ) {
             if(c.getId().equals(id)) {
                 c.increaseSalry(val);
-                return;
+                break;
             }
         }
     }
