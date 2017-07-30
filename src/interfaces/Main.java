@@ -6,7 +6,8 @@ package interfaces;
 public class Main {
 
     // funkcja jako arg przyjmie ref na obiekt klasy implementujacej intesfejs
-
+    // wtedy jako argument moze byc obiekt z dowolnej klasy implementujacej ten interfejs
+    // przyklad - uzyjemy silni ale potem zaleznie od obiektu jaki przekaze algorytm silni moze byc rozny
     private static int mat(int x,SimpleMatOps mathop) {
         return 2*x + mathop.factorial(x);
     }
