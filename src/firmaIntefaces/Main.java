@@ -11,6 +11,8 @@ public class Main {
         String s = emp.toString();
         System.out.println(s);
         System.out.println(emp);
-
+Person prac = new Employee(3L,"ala","Makota");
+prac.getId(); //spoko ,oge traktowac pracownika jako osobe, ale tu nie ma metody getsalary, bo zrzutowalem na person
+emp.getSalary(); //tu jest dostep do getSalary
     }
 }

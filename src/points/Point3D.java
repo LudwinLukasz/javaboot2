@@ -7,6 +7,7 @@ public class Point3D extends Point2D{
     private int z;
 
     public Point3D() {
+      //  super();
         z = 0;
     }
 
